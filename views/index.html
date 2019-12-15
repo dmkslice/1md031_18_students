@@ -1,9 +1,91 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
-        <title>DELI-VERY</title>
+      <script src="https://vuejs.org/js/vue.js"></script>
+      <script src="js/js_script.js"></script>
+      <script src="js/vue_script.js"></script>
+        <title>burger boys</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css\style.css">
     </head>
+    <section class="header">
+      <h1 id="headertext">Välkommen till BurgerOnline</h1>
+      <img id="headerimage"src="https://cdn.pixabay.com/photo/2015/11/10/08/31/banner-1036483__340.jpg" >
+  </section>
     <body>
-        <h1>Hello World!!!</h1>
+      <main>
+
+          <section id="burger-select">
+
+              <h1>select Burger</h1>
+              <p>This is where you execute burger selection</p>
+
+              <div class="wrapper" id="myid" v-for="burger in burgers">
+                <div class={{class}}><dt>
+                  <h1>{{name}}</h1>
+                  <img src={{pitchure}} width="200" height="121" alt={{name}}>
+                  <ul>
+                    {{kalori}}
+                    {{gluten}}
+                    {{lactos}}
+                  </ul>
+                </dt>
+                </div>
+
+                </div>
+
+
+          </section>
+
+          <section id=customerinfo>
+            <h1>customer information</h1>
+            <p>this is where you povide necessary information</p>
+            <p>
+              <label="fullname">fullname</label><br>
+              <input type="text" id="fullname" name="fn" required="required" placeholder="first and last name">
+            </p>
+            <p>
+              <label="Email">Email</label><br>
+              <input type="text" id="Email" name="EM" required="required" placeholder="Email adress">
+          </p>
+          <p>
+            <label="Street">Street</label><br>
+            <input type="text" id="Street" name="ST" required="required" placeholder="Street name">
+          </p>
+          <p>
+            <label="House">House</label><br>
+            <input type="text" id="House" name="hs" required="required" placeholder="House number">
+          </p>
+
+          <p>
+            <label for="payment option">payment option</label><br>
+            <select id="payment option" name="po">
+              <option>credit card </option>
+              <option>Swich</option>
+              <option>cash att door</option>
+              <option>paypal</option>
+              <option>with a smile</option>
+            </select>
+          </p>
+          <p>
+            <label="Gender">Gender</label><br>
+            <input type="radio" id="female" name="GE" required="required" value="female">
+            <label="female">female</label><br>
+            <input type="radio" id="male" name="GE" required="required" value="male">
+            <label="male">male</label><br>
+            <input type="radio" id="other" name="GE" required="required" value="other">
+            <label="other">other</label><br>
+          </p>
+
+
+          </section>
+          <section id="checkout">
+            <button><img src="https://i.pinimg.com/originals/6e/c8/fa/6ec8fa35800b339aa060d70d67edcf03.gif" width="30"> place order</button>
+          </section>
+
+          <footer> kick as burger makers AA</footer>
+      </main>
     </body>
 </html>
